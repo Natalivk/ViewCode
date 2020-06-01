@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.3.0" client="site" method="upgrade">
+    <name>AW Video</name>
+    <author>Natali</author>
+    <version>1.0.0</version>
+	<description>
+	<![CDATA[
+		<span class='readonly'>
+			<h1>AW Video</h1>
+			<p>Created by Natali</p>
+		</span>
+		<span class='tooltip-content'>Advanced content module for Joomla!</span>
+		<style type='text/css'>
+			span.readonly { padding: 10px; font-family: Arial; font-size:13px !important; font-weight: normal !important; text-align: justify; color: #4d4d4d; line-height: 24px; } 
+			span.readonly h1 { clear:both; font-family: Georgia, sans-serif; font-size:38px; margin:30px 20px 23px; padding:0px 0px 24px 10px; color:#333; border-bottom: 1px solid #eee; font-weight: normal; } 
+			span.readonly p { margin: 0 26px 10px } 
+			span.readonly p a { color: #ef6b09 } 
+			span.readonly p.homepage { margin-top: 30px } 
+			span.readonly p.license { border-top: 1px solid #eee; font-size: 11px; margin: 30px 26px 0; padding: 6px 0; }
+			span.tooltip-content { display: none; }
+			.tip-text span.readonly { display: none; }
+			.tip-text span.tooltip-content { display: block; }
+		</style>
+	]]>
+	</description>
+	
+	 <files>
+        <filename>mod_aw_video.xml</filename>
+        <filename module="mod_aw_video">mod_aw_video.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+		<folder>tmpl</folder>
+    </files>
+    <config>
+		<fields name="params">	
+		
+			<fieldset name="Settings" label="Settings" >
+				
+				<field name="mp4" type="filelist" default="" label="MP4 Video" description="" directory="images/video/" hide_default="true" />
+				<field name="ogg" type="filelist" default="" label="OGG Video" description="" directory="images/video/" hide_default="true" />
+				<field name="webm" type="filelist" default="" label="WEBM Video" description="" directory="images/video/" hide_default="true" />
+				
+				<field name="image" type="media" default="" label="Image" />
+				
+				<field name="overlayColor" type="text" default="" label="Overlay Color" />
+				<field name="overlayOpacity" type="text" default="" label="Ovelay Opacity" />
+				
+				<field name="title" type="text" default="" label="Title" />
+				<field name="text" type="editor" default="" label="Text" />
+				
+				<field name="buttonLabel" type="text" default="" label="Button Label" />
+				<field name="buttonLink" type="text" default="" label="Button Link" />
+								
+				
+				
+				
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+    </config>
+
+</extension>
